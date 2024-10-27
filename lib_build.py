@@ -168,6 +168,7 @@ else:
     env.Append(CPPPATH=[os.path.realpath(os.path.join("FreeRTOS-Kernel/portable/GCC/", devices[port[0]]))])
     env.Replace(SRC_FILTER=[
             "+<FreeRTOS-Kernel/>",
+            "-<FreeRTOS-Kernel/examples/>",
             "-<FreeRTOS-Kernel/portable/>",
             "+<FreeRTOS-Kernel/portable/MemMang/heap_4.c>",
             os.path.join("+<FreeRTOS-Kernel/portable/GCC/", devices[port[0]], ">")
